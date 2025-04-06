@@ -1,0 +1,40 @@
+.animation-fadein {
+    animation-name: fadein;
+    animation-duration: 700ms;
+    animation-timing-function: ease-out;
+}
+
+.animation-fadein-top {
+    animation-name: fadein-top;
+    animation-duration: 700ms;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadein-top {
+    from {
+        top: -10px;
+        opacity: 0;
+    }
+        
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.appear {
+    transition: all 0.8s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.appear.inview {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.3s;
+}

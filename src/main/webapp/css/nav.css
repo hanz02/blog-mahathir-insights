@@ -1,0 +1,391 @@
+@charset "UTF-8";
+
+:root {
+    --white: rgb(255, 255, 240);
+    --dark: rgb(65, 59, 51);
+    --creamy: rgb(245, 222, 179);
+    --peach: rgb(255, 229, 180);
+    --honeydew: #f0fff0;
+
+	--red: #C7253E;
+	--green: #00ec91;
+}
+
+body {
+	font-family: "Nanum Gothic", sans-serif;
+}
+
+/****************************************************
+*					Navigation Bar					*
+****************************************************/
+#navigation-bar {
+	position: fixed;
+	width: 100%;
+
+	z-index: 1000;
+}
+
+#navigation-bar:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	right: 50%;
+	width: 90%;
+	border-bottom: 1px solid rgba(255, 255, 240, 0.4);
+	transform: translate(-50%, -50%);
+}
+
+/** navigation bar add bottom padding and remove horizontal line when in mobile view */
+#navigation-bar.mobile-actived {
+	padding-bottom: 1rem;
+}
+#navigation-bar.mobile-actived::after {
+	display: none;
+}
+
+
+#navigation-bar.transparent nav, .navbar .navbar-nav .btn-contact {
+	background-color: transparent;
+}
+
+.navbar .navbar-brand {
+	font-family: "Playfair Display", serif !important;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 2rem;
+	line-height: 1.9rem;
+	margin-block: 0.5rem;
+
+	transition: 300ms ease-out;
+}
+
+#navigation-bar .navbar-brand span {
+	font-size: 1.3rem;
+	transition: 300ms ease-out;
+}
+
+/** when scrolled down, shrink the nav bar  */
+#navigation-bar.scrolled  .navbar .navbar-brand {
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+	margin-block: 0.2rem;
+	transition: 500ms ease-out;
+
+}
+
+#navigation-bar.scrolled .navbar-brand span {
+	font-size: 1rem ;
+	transition: 500ms ease-out;
+}
+
+.navbar .navbar-brand:hover {
+	letter-spacing: 2px;
+}
+
+/* .navbar .navbar-brand:before {
+	content: 'Mahathir Insights';
+	color: black;
+	position: absolute;
+	width: 0%;
+	overflow: hidden;
+	font-weight: 600;
+
+	transition: 1s ease-out;
+}
+
+.navbar .navbar-brand:hover::before {
+	width: 100%;
+	transition: 2s ease-out;
+} */
+
+
+
+.navbar .navbar-nav a {
+	position: relative;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+
+	text-decoration: none;
+	transition: 0.5s;
+	margin-right: 2rem;
+	padding-top: 0.8rem;
+}
+
+.navbar .navbar-nav .nav-link:after {
+	content: "";
+	position: absolute;
+	height: 0.2rem;
+	width: 100%;
+	bottom: -50%;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	transition: 300ms ease-out;
+
+}
+
+.navbar .navbar-nav a:hover {
+	letter-spacing: 2px;
+}
+
+.navbar .navbar-nav .nav-link:hover::after {
+	bottom: -10%;
+	opacity: 100;
+
+	transition: 300ms ease-out;
+}
+
+/** when scrolled down, shrink the nav bar  */
+#navigation-bar.scrolled .navbar .navbar-nav a {
+	font-size: 0.9rem;
+}
+
+#navigation-bar.scrolled .navbar .navbar-nav a:hover {
+	letter-spacing: 1px;
+}
+/**  */
+
+.contact-container {
+	margin-left: 3rem;
+}
+
+.navbar .navbar-nav .btn-contact {
+	position: relative;
+	letter-spacing: 2px;
+	font-weight: 1000;
+	width: 150px;
+	height: 53px;
+	text-transform: uppercase;
+
+
+	border:none;
+
+	transition: 350ms ease-out;
+
+}
+
+/** when scrolled down, shrink the nav bar  */
+#navigation-bar.scrolled .navbar .navbar-nav .btn-contact {
+	width: 140px;
+	height: 48px;
+}
+
+/**  */
+
+
+.navbar .navbar-nav .btn-contact span {
+	content: '';
+
+	position: absolute;
+	height: 0.2rem;
+
+	transition: 300ms ease-out;
+}
+
+.navbar .navbar-nav .btn-contact span:nth-child(1) {
+	left: 0%;
+	top: 0%;
+
+	height: 50%;
+
+}
+
+.navbar .navbar-nav .btn-contact span:nth-child(3) {
+	right: 0%;
+	bottom: 0%;
+
+	height: 50%;
+
+}
+
+.navbar .navbar-nav .btn-contact span:nth-child(2) {
+	left: 0%;
+	top: 0%;
+
+	width: 35%;
+
+}
+
+
+.navbar .navbar-nav .btn-contact span:nth-child(4) {
+	right: 0%;
+	bottom: 0%;
+
+	width: 35%;
+
+}
+
+
+.navbar .navbar-nav .btn-contact:hover {
+	border: none;
+
+	transition: 250ms ease-out;
+	transition-delay: 350ms;
+
+}
+
+.navbar .navbar-nav .btn-contact:hover span:nth-child(odd) {
+	height: 100%;
+}
+
+.navbar .navbar-nav .btn-contact:hover span:nth-child(even) {
+	width: 100%;
+}
+
+
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+
+.navbar-toggler {
+	border: none;
+}
+
+.navbar-toggler:focus {
+	border: none;
+	text-decoration: none;
+	outline: 0;
+	box-shadow: 0 0 0 1px var(--white);
+	/* All the borders by using the spread properties */
+
+}
+
+/** Colored Nav Bar, when it's not transparent */
+#navigation-bar.colored {
+	background-color: rgb(255, 255, 240);
+	transition: 450ms all ease-out;
+}
+
+
+#navigation-bar.colored * {
+	color: black;
+}
+
+#navigation-bar.colored .nav-link:after,
+#navigation-bar.transparent-colored .nav-link:after {
+	background-color: black;
+}
+
+
+#navigation-bar.colored .navbar .navbar-nav .btn-contact {
+	color: black;
+
+}
+
+#navigation-bar.colored .navbar .navbar-nav .btn-contact span,
+#navigation-bar.transparent-colored  .navbar .navbar-nav .btn-contact span{
+	background-color: black;
+	border: 2px solid black;
+
+}
+
+#navigation-bar.colored .navbar .navbar-nav .btn-contact:hover,
+#navigation-bar.transparent-colored .navbar .navbar-nav .btn-contact:hover {
+	background-color: black;
+	color: var(--white);
+}
+
+#navigation-bar.colored .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+#navigation-bar.colored .navbar-toggler:focus {
+	box-shadow: 0 0 0 1px black;
+}
+
+#navigation-bar.transparent-colored {
+	color: black;
+}
+
+#navigation-bar.transparent-colored:after {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+#navigation-bar.transparent-colored .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+#navigation-bar.transparent-colored .navbar-toggler:focus {
+    box-shadow: 0 0 0 1px var(--dark);
+}
+
+/** transparent nav: make nav transparent */
+#navigation-bar.transparent {
+	background-color: unset;
+	transition: 450ms all ease-out;
+}
+
+#navigation-bar.transparent * {
+	color: var(--white);
+}
+
+#navigation-bar.transparent .nav-link:after {
+	background-color: var(--white);
+}
+
+
+#navigation-bar.transparent .navbar .navbar-nav .btn-contact {
+	color: var(--white);
+
+}
+
+#navigation-bar.transparent .navbar .navbar-nav .btn-contact span {
+	background-color: var(--white);
+	border: 2px solid var(--white);
+
+}
+
+#navigation-bar.transparent .navbar .navbar-nav .btn-contact:hover {
+	background-color: var(--white);
+	color: black;
+}
+
+
+@media (max-width: 992px) {
+	.navbar .navbar-nav a::after {
+		display: none;
+	}
+
+	.contact-container {
+		margin-left: 0;
+	}
+
+	.navbar .navbar-nav .btn-contact,
+	#navigation-bar.scrolled .navbar .navbar-nav .btn-contact {
+		height: initial;
+		width: initial;
+		font-size: 1rem;
+		padding: initial;
+		padding-block: 0.5rem;
+		letter-spacing: 1px;
+
+		
+		text-transform: initial;
+	}
+
+	#navigation-bar.scrolled .navbar .navbar-nav .btn-contact {
+		font-size: 0.9rem;
+	}
+
+	.navbar .navbar-nav .btn-contact:hover {
+		background-color: unset;
+		color: var(--white);
+		border: none;
+		letter-spacing: 2px;
+
+		transition-delay: unset;
+	}
+
+	#navigation-bar.transparent .navbar .navbar-nav .btn-contact:hover,
+	#navigation-bar.colored .navbar .navbar-nav .btn-contact:hover {
+		background-color: initial;
+		color: unset;
+	}
+
+	.navbar .navbar-nav .btn-contact span {
+		display: none;
+	}
+}

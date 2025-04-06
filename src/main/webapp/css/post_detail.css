@@ -1,0 +1,368 @@
+@charset "UTF-8";
+
+:root {
+    --white: rgb(255, 255, 240);
+    --dark: #504130;
+    --creamy: #f5deb3;
+    --peach: #ffe5b4;
+    --honeydew: #f0fff0;
+}
+
+body {
+	font-family: "Nanum Gothic", sans-serif;
+    background-color: var(--white);
+
+}
+
+/****************************************************
+*				Blog Post Content					*
+****************************************************/
+/*.main-content{
+	padding-top: 200px;
+}
+
+/* Blog Post Title */
+/*h1 {
+    color: black;
+	font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+}*/
+
+/* parent container */
+.page-wrapper {
+	background-color: var(--white);
+    display: flex;                
+    justify-content: center;      
+    align-items: flex-start;      
+    min-height: 100vh;             
+    padding: 0 20px;               
+    box-sizing: border-box;       
+
+}
+
+/* Center the content inside .main-content */
+.main-content {
+    text-align: center;                           
+    padding: 20px;                
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.max-container {
+	max-width: 800px;             
+    width: 100%;    
+	margin: auto;
+}
+
+/* Title of blog post */
+h1 {
+    font-family: "Playfair Display", serif;
+	font-size: 2.5rem;              
+    margin-bottom: 10px;          
+    padding-top: 200px;           
+}
+
+/* Styling for paragraphs or article content */
+p {
+	font-size: 1.1rem;            
+    line-height: 1.6;             
+	text-align: left;
+	color: black;
+	
+}
+
+.subtitle{
+	margin-top: 20px;
+	font-size: 1.3rem;            
+    line-height: 1.6;             
+	text-align: justify;
+	font-weight: bold;
+	margin-bottom: 20px;
+
+}
+
+/* publication date styling */
+.publication-date {
+    font-style: italic; 
+    color: #777; 
+    font-size: 0.9rem; 
+    margin-bottom: 0.5rem; 
+    text-align: justify; 
+    padding-top: 10px; 
+}
+
+/* Social Media Icon CSS */
+.icon-container {
+    display: flex;  
+    align-items: center;  
+}
+.icon-container a {
+    margin-right: 10px;   
+	margin-bottom: 0.5rem; 
+}
+.icon-container i.fab.fa-facebook {
+    color: #3b5998;
+}
+
+.icon-container i.fab.fa-instagram {
+    color: #E4405F;
+}
+
+/* Hover color */
+.icon-container i.fab.fa-facebook:hover {
+    color: #8b9dc3; 
+}
+
+.icon-container i.fab.fa-instagram:hover {
+    color: #C13584; 
+}
+
+.icon-container i.fa-brands.fa-x-twitter{
+	color: black;
+}
+
+.icon-container i.fa-brands.fa-x-twitter:hover {
+ 	color: #B0B0B0; 
+}
+
+.icon-container i.fa-brands.fa-youtube{
+	color: #FF0000;
+}
+.icon-container i.fa-brands.fa-youtube:hover{
+	color: #C4302B;
+}
+
+/**********************/
+
+#readAloudBtn{	         
+	margin-left: auto;
+    background-color: transparent;
+    border: 1px solid #00000028;
+    margin-bottom: 1rem;
+
+    transition: background-color 300ms ease-out;
+
+}
+
+#readAloudBtn:hover {	         
+    background-color: var(--honeydew);
+
+}
+
+
+/* Image overflow but remain centered */
+.image-container {
+    position: relative;          
+    width: 100%;                 
+    overflow: visible;           
+    text-align: center;
+	margin-bottom: 30px;    
+}
+
+.image-container img {
+    position: relative;          
+    height: 100%;
+    width: 100%;                  
+}
+
+.title-banner {
+	display: flex;
+	flex-direction: column;
+	max-width: 1200px;
+	width: 100%;
+}
+
+.post-image {
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+
+}
+
+/* image centered within flexbox */
+/*.image-container {
+    display: block;         
+    margin: 0 auto 30px;         
+    text-align: center;     
+}*/
+
+/* Ensure the image inside the container scales correctly */
+/*.image-container img {
+    max-width: 100%;        
+    height: auto;            
+}*/
+
+/* Make the first letter of first paragraph larger */
+.first-paragraph::first-letter {
+	font-family:"Playfair Display", serif; ;
+    font-size: 4rem;          
+    font-weight: bold;        
+    color: black;           
+    float: left;              
+    margin-right: 10px;       
+    line-height: 0.8;           
+    padding-left: 5px;         
+}
+
+/* CSS for image2 */
+.image-container2 {
+    display: block;         
+    margin: 20px auto 30px;         
+    text-align: center;     
+}
+
+.image-container2 img {
+    width: 100%;        
+    height: auto;            
+}
+
+/* Read more CSS */
+.read-more{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+    margin-bottom: 2rem;
+	width: 100%;
+	padding: 40px 0px;
+}
+
+ul a{
+	text-decoration: none;
+	color: #069;
+	font-size: 0.9rem;
+}
+
+
+.read-more h2 {
+	font-family: "Playfair Display", serif;
+	font-size: 1.7rem;
+    text-align: center; 
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 2rem; 
+    text-shadow: -1px 0px 5px rgba(80, 65, 48, 0.155);
+    border-top: rgba(0, 0, 0, 0.21) solid 2px;
+    padding-top: 3rem;
+
+}
+
+.read-more ul {
+    list-style-type: none;
+
+}
+
+.read-more li {
+    margin-inline: 0.5rem;
+    margin-top: 1rem;
+
+    max-width: 260px;
+    width: 90%;
+}
+
+.read-more-post b {
+    transition: letter-spacing 500ms ease-out;
+}
+
+.read-more .read-more-post:hover b {
+    letter-spacing: 1px;
+}
+
+.read-more-wrapper {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border: 10px solid magenta; */
+
+}
+
+.read-more .post-wrapper {
+    position: relative;
+
+    min-height: 380px;
+    border-radius: 0.3rem;
+    overflow: hidden;
+
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+
+    transition: all 350ms ease-out;
+}
+
+.read-more .post-wrapper:hover {
+    transform: scale(1.01);
+}
+
+.read-more .post-wrapper .post-details {
+    margin-top: auto;
+    position: relative;
+    z-index: 999;
+    min-height: 50%;
+
+    padding: 1.5rem;
+    backdrop-filter: blur(30px);
+    margin: -1px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.read-more .post-wrapper .post-details * {
+    color: var(--white);
+    
+    -webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-transform: translateZ(0);
+	backface-visibility: hidden;
+	perspective: 1000;
+	transform: translate3d(0,0,0);
+	transform: translateZ(0);
+
+}
+
+.read-more .post-wrapper .post-details b {
+    margin-top: auto;
+}
+
+.read-more .post-img,
+.read-more .post-img::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    display: inline-block;
+}
+
+.read-more .post-img::before {
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 999;
+
+}
+
+.read-more .post-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 500ms ease-out;
+}
+
+.read-more .read-more-post:hover .post-img img {
+    transform: scale(1.05);
+    z-index: -999;
+
+}
+

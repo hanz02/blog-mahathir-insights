@@ -1,0 +1,161 @@
+.footer {
+    position: relative;
+    min-height: 14rem;
+    padding-block: 2rem;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+
+    color: var(--dark);
+    z-index: 999;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    right: 50%;
+
+    transform: translate(-50%, -50%);
+    max-width: 90rem;
+    width: 90%;
+    border-bottom: 1px solid var(--dark);
+    opacity: 20%;
+}
+
+
+.footer-container {
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 1px solid white; */
+}
+
+.footer-logo {
+    font-family: "Playfair Display", serif !important;
+	letter-spacing: 1px;
+	font-size: 2rem;
+    /* border: 1px solid #000; */
+
+
+	transition: 300ms ease-out;
+    margin-inline: 4rem;
+}
+
+.footer-logo h3 {
+	line-height: 1.9rem;
+	text-transform: uppercase;
+}
+
+.footer-logo p {
+    padding-top: 0.5rem;
+	font-size: 0.7rem;
+}
+
+.footer-logo span {
+	font-size: 1.3rem;
+}
+
+.footer .footer-links {
+    display: flex;
+    flex-direction: column;
+
+    border-right: 4px solid var(--dark);
+    padding-inline: 4rem;
+}
+
+.footer .footer-body {
+    display: flex;
+    /* border: 1px solid #000; */
+}
+
+.footer .footer-socials a,
+.footer .footer-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 0.8rem;
+}
+
+.footer .footer-links a {
+    margin-block: 0.3rem;
+    letter-spacing: 1px;
+}
+
+.footer .footer-socials {
+    display: flex;
+    align-items: center;
+    padding-inline: 4rem;
+    margin-block: 1rem;
+}
+
+.footer .footer-socials a {
+    margin-inline: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.footer.footer-transparent,
+.footer.footer-transparent-colored {
+    background: transparent;
+}
+
+/** transparent light footer  */
+.footer.footer-transparent *,
+.footer.footer-transparent a {
+    color: var(--white);
+}
+
+.footer.footer-transparent .footer-links {
+    border-right: 4px solid var(--white);
+}
+
+.footer.footer-transparent::before {
+    border-bottom: 1px solid var(--white) !important;
+}
+
+@media (max-width: 992px) {
+    .footer {
+        padding-block: 3rem;
+    }
+
+    .footer-container {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .footer .footer-links {
+        border: none;
+    }
+
+    .footer .footer-body {
+        border-top: solid var(--dark) 1px;
+        padding-top: 2rem;
+        margin-top: 1rem;
+    }
+
+    .footer.footer-transparent .footer-body {
+        border-top: solid var(--white) 1px;
+    }
+
+    .footer .footer-body {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer .footer-logo {
+        margin-inline: 4rem;
+    }
+}
+
+@media (max-width: 592px) {
+    .footer-transparent .footer-links {
+        border-right: none !important;
+    }
+}
